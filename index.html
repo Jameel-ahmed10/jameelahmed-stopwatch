@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container{
+    background: url("2.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 600px;
+    width: 50%;
+    margin: 1px auto;
+    border-radius: 100px 0px 100px 0px;
+}
+#head h1{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 55px;
+    color: white;
+}
+    #stopwatch{
+        width: 402px;
+        height: 200px;
+        margin: 10px auto;
+        box-shadow: 25px 25px 150px black;
+        border-radius: 25px 0px 25px 0px;
+    }
+    #num h1{
+        display: inline-block;
+        width: 50px;
+        text-align: center;
+        font-size: 35px;
+        
+    }
+    #num{
+        width: 280px;
+        margin: 1px auto;
+
+     
+       
+    }
+    #btn{
+        margin: 1px auto;
+        width: 310px;
+        height: 40px;
+        margin-top: 30px;
+  
+        
+    }
+    #btn button{
+        width: 100px;
+        height:35px;
+        font-size: 15px;
+        background-color:none;
+        box-shadow: 5px 5px 10px black;
+        border-radius: 0px 10px 0px 10px;
+        background-color: white;
+        text-decoration: none;
+        
+
+    }
+
+    #btn button:hover{
+        background-color: lightcyan;
+        font-weight: bold;
+    }
+    @media screen and (max-width: 530px){
+        .container{
+            width: 100%;
+        }
+        #stopwatch{
+        width: 300px;
+        }
+        #btn{
+            width: 250px;
+        }
+        #btn button{
+            width: 75px;
+        }
+        #num{
+            width: 270px;
+        }
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="head">
+            <h1>StopWatch</h1>
+        </div>
+        <div id="stopwatch">
+            <div id="num">
+                <h1 id="min">00</h1>
+               <h1>:</h1>
+                <h1 id="sec">00</h1>
+                <h1>:</h1>
+                <h1 id="msec">00</h1>
+            </div>
+            <div id="btn">
+                <button onclick="start();this.disabled=true">Start</button>
+                <button onclick="pause()">Pause</button>
+                <button onclick="reset()">Reset</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
